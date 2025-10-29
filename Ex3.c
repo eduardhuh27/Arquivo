@@ -37,7 +37,9 @@ int contarLetras(char nomeArq[])
     }
     while(fscanf(arq,"%c",&lendo)!=EOF)
     {
-        if( (lendo>='a') && (lendo<='z'))
+       lendo = toupper(lendo);
+        
+        if( (lendo>='A') && (lendo<='Z'))
         {
              cont++;
          }

@@ -12,7 +12,7 @@ int main()
 
     resposta = contarCaracter(nomeArq);
 
-    if(!resposta)
+    if(resposta==-1)
     {
         printf("ERRO: nao foi possivel abrir o arquivo!!");
     }
@@ -31,9 +31,9 @@ int contarCaracter (char nomeArq[])
 
     arq=fopen(nomeArq,"r");
     
-    if(arq==NULL)
+    if(!arq)
     {
-        return 0;
+        return -1;
     }
     while(fscanf(arq,"%c",&lendo)!=EOF)
     {
